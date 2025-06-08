@@ -1,16 +1,19 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- */
-
 package com.guiproject;
+
+import java.util.Scanner;
 
 /**
  *
- * @author User
+ * @author Loug
  */
 public class Guiproject {
-
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        Scanner scan = new Scanner(System.in);
+        System.out.print("Your input: ");
+        String mystr = scan.nextLine();
+        System.out.println(mystr);
+        
+        Person loug = new Person("Loug", 32);
+        System.out.println(loug);
     }
 }
