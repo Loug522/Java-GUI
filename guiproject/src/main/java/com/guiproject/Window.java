@@ -1,17 +1,33 @@
 package com.guiproject;
 
+import javax.swing.JButton;
 import javax.swing.JFrame;
 
-
 public class Window {
-    
-    JFrame window = new JFrame();
-    
-    public Window() {
-        window.setVisible(true);
-        window.setName("Super Mario World");
-        window.setBounds(0, 0, 600, 400);
-        window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    private JFrame window;
+    private JButton button;
+    private int height;
+    private int width;
 
+    public Window(int height, int width) {
+        window = new JFrame();
+        button = new JButton("CLICK ME!");
+        this.height = height;
+        this.width = width;
+    }
+    
+    public void Window() {
+        // BUTTON
+        window.add(button);
+        button.setBounds(250, 275, 100, 50);
+        
+        
+        // WINDOW
+        window.setLayout(null); // This will allow resizing of components
+        window.setSize(width, height);
+        window.setTitle("Platformer");
+        window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        
+         window.setVisible(true);
     }
 }
